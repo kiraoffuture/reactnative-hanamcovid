@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "1090545170790",
-    "project_id": "reactnativebase-84dbe",
-    "storage_bucket": "reactnativebase-84dbe.appspot.com"
+    "project_number": "486028429532",
+    "project_id": "hanamcovid",
+    "storage_bucket": "hanamcovid.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1090545170790:android:1898d514e7fd8bf0ca70a7",
+        "mobilesdk_app_id": "1:486028429532:android:2fb58bd57a4db3f7a18c19",
         "android_client_info": {
-          "package_name": "com.kira.reactnativebase"
+          "package_name": "com.kira.hanamcovid"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1090545170790-jjck3ik3k0snf7gsurv4osjssd22a82t.apps.googleusercontent.com",
+          "client_id": "486028429532-4gapmvr9bl0ipm8b9c79bqnkno692qvu.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCn6-GnA5OcfGqN5VwEEvS4TGjmvsjHrkY"
+          "current_key": "AIzaSyBBwEUovKfyF88jkNLwGtRznLB0zxej3HE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1090545170790-jjck3ik3k0snf7gsurv4osjssd22a82t.apps.googleusercontent.com",
+              "client_id": "486028429532-4gapmvr9bl0ipm8b9c79bqnkno692qvu.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

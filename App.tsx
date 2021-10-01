@@ -1,12 +1,15 @@
 import React, {useEffect, useState} from 'react'
 import {NavigationContainer} from '@react-navigation/native'
 import {LogBox, View} from 'react-native'
-import {Context} from './app/context'
+import {Context} from '@app/context'
 import MainNavigator from './app/screens/main/mainNavigator'
 import AuthNavigator from './app/screens/auth/authNavigator'
+// @ts-ignore
 import Spinner from 'react-native-loading-spinner-overlay'
-import {REQUEST_TIMEOUT} from './app/configs/api'
-import {getIsLoggedIn} from './app/screens/auth/login/repository'
+import {REQUEST_TIMEOUT} from '@configs/api'
+import {getIsLoggedIn} from '@screens/auth/login/repository'
+import messaging from '@react-native-firebase/messaging'
+import Toast from 'react-native-root-toast'
 
 LogBox.ignoreLogs([
   'RCTBridge required dispatch_sync to load RCTDevLoadingView. This may lead to deadlocks',
@@ -34,6 +37,23 @@ const App = () => {
       .catch(() => {
         setIsLoggedIn(false)
       })
+    messaging()
+      .getToken()
+      .then(result => {
+        console.log('token = ' + JSON.stringify(result))
+      })
+      .catch(e => {
+        console.log(e)
+      })
+    messaging()
+      .subscribeToTopic('news')
+      .then(() => console.log('Subscribed to topic!'))
+    return messaging().onMessage(async remoteMessage => {
+      console.log(JSON.stringify(remoteMessage))
+      Toast.show(
+        `A new FCM message arrived!', ${JSON.stringify(remoteMessage)}`,
+      )
+    })
   }, [])
 
   if (isLoggedIn === null) {

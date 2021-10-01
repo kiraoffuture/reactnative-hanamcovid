@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.kira.reactnativebase">
+  package="com.kira.hanamcovid">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
